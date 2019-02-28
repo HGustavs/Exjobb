@@ -1,9 +1,16 @@
 #header{
-  background-color: #0039e6;
+  background-color: #5c5c8a;
+  height: 30px;
+  text-align: center;
+  margin: auto;
+  padding: 0px;
+  position: fixed;
 }
 #content{
 
 }
 #footer{
-  background-color: "#0039e6";
+  background-color: #5c5c8a;
+  height: 60px;
+
 }
