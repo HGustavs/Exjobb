@@ -1,11 +1,12 @@
 #header{
   background-color: #5c5c8a;
-  height: 50px;
+  height: 45px;
   text-align: center;
   margin: 0px;
 }
 #content{
-
+  background-color: #9494b8;
+  height: 800px;
 }
 #footer{
   background-color: #5c5c8a;
