@@ -1,4 +1,3 @@
-
-main(){
-alert("RASMUS ÄR BIG TREVLIG")
-};
+function main(){
+alert("RASMUS ÄR BIG TREVLIG");
+}
