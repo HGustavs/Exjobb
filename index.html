@@ -2,25 +2,43 @@
 <head>
   <meta charset="utf-8">
   <title>Examensarbete</title>
-  <script src="vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
 
 
 <body>
 
   <div id="header">
-    <h1>Exjobbs-Nytt</h1>
+    <h1> {{message}} </h1>
   </div>
 
-  <div id ="content">
-    <span>Här kommer det vara nyheter osv</span>
+  <div id="menu">
+    <ul id="MenuListA">
+      <li id="MenuListB" v-for="todo in todos">
+         {{ todo.text }}
+      </li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <div class="news" id="news1">
+      {{ message }}
+    </div>
+    <div class="news" id="news2">
+      {{ message }}
+    </div>
+    <div class="news" id="news3">
+      {{ message }}
+    </div>
   </div>
 
 <div id="footer">
-  RASMUS ÄR BIG TREVLIG
-  Kontakt
-  Arbete
+    <div  id="footerCont" v-for="todo in todos">
+      {{ todo.text }}
+    </div>
 </div>
+<script src="javascript.js"></script>
 </body>
 </html>
