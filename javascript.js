@@ -13,7 +13,7 @@ var menu = new Vue({
       { text: 'Inrikes'},
       { text: 'Utrikes'},
       { text: 'Sport'},
-      //{ text: 'för enkel utökning'}
+      //{ text: ''} för enkel utökning
     ]
   }
 });
@@ -21,21 +21,24 @@ var menu = new Vue({
 var news1 = new Vue ({
   el: '#news1',
   data:{
-    message:'Nyheter kommer vara här'
+    headline:'Headline #1',
+    text:'lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här '
   }
 });
 
 var news2 = new Vue ({
   el: '#news2',
   data:{
-    message:'Mer nyheter'
+    headline:'Headline #2',
+    text:'lorem ipsum här'
   }
 });
 
 var news3 = new Vue ({
   el: '#news3',
   data:{
-    message:'Ännu mer nyheter'
+    headline:'Headline #3',
+    text:'lorem ipsum här'
   }
 });
 
@@ -46,7 +49,7 @@ var footer = new Vue({
       { text: 'Kontakt'},
       { text: 'Examensarbete'},
       { text: 'Terms of Service'},
-      //{ text: 'för enkel utökning'}
+      //{ text: ''}
     ]
   }
 });
