@@ -61,12 +61,10 @@ li{
   border-radius: 5px 5px 5px 5px;
   padding-top: 10px;
   padding-bottom: 5px;
-  max-height: 400px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
-
+.BigNews{
+  background-color: #9494b8;
+}
 #footer{
   background-color: #5c5c8a;
   height: 100px;
