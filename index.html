@@ -1,0 +1,56 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Examensarbete - angular</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+  <script src="javascript-ang.js"></script>
+  <link rel="stylesheet" type="text/css" href="css-ang.css">
+</head>
+
+<body ng-app="myApp">
+
+  <div id="header" ng-controller="headCtrl";>
+    <h1 id="header1" ng-repeat="y in header"> {{y.text}} </h1>
+  </div>
+
+  <div id="menu" ng-controller="headCtrl";>
+    <ul id="MenuListA">
+      <li id="MenuListB" ng-repeat="x in categories">
+        {{ x.category }}
+      </li>
+    </ul>
+  </div>
+
+  <div class="content" id="body1" ng-controller="contentOne">
+    <div class="news" id="news1" >
+      <div ng-repeat="c in articlesOne">
+      <div><h2>{{ c.headline }}<h2></div>
+      <div>{{ c.text }}</div>
+    </div>
+    <div><iframe width="560" height="315" src="https://www.youtube.com/embed/HgBN6eHzyBc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    </div>
+  </div>
+
+  <div class="content" id="body1" ng-controller="contentTwo">
+    <div class="news" id="news2" >
+      <div ng-repeat="c in articlesTwo">
+      <div><h2>{{ c.headline }}<h2></div>
+      <div>{{ c.text }}</div>
+    </div>
+
+    </div>
+  </div>
+
+  <div class="BigNews" id="data" ng-controller="contentThree">
+    <div ng-repeat="article in articleList track by $index">
+      <div class="news">
+        <div>{{ article.title }}</div>
+        <div>{{ article.author}} {{ article.date}}</div>
+        <div>{{ article.content}}</div>
+    </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
