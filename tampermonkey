@@ -1,0 +1,58 @@
+// ==UserScript==
+// @name         New Userscript
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  try to take over the world!
+// @author       Philip Lundman
+// @match        192.168.64.2/Exjobb-ang/
+// @match        192.168.64.2/Exjobb/
+// @require      https://code.jquery.com/jquery-3.4.0.js
+// @grant        none
+// ==/UserScript==
+
+
+var counter = 0;
+var Count;
+var count;
+var searchCount;
+var repeater;
+var print;
+var list = [];
+
+
+
+if (localStorage.getItem("Count") === null){
+    localStorage.setItem("Count", 1);
+};
+
+localStorage.setItem('searchCount' , searchCount = 5);
+
+
+var start = window.performance.now();
+document.addEventListener('readystatechange', event => {
+      if (event.target.readyState === "complete") {
+      //console.log("Now external resources are loaded too, like css,src etc... ")
+
+      var end = performance.timing.navigationStart + performance.now();
+      }
+
+    else{
+    console.log("fel");
+    };
+
+if(parseInt(localStorage.getItem('Count'), 10) < parseInt(localStorage.getItem('searchCount'), 10)){
+        // Word count is added and the page reloads to start the script again.
+        localStorage.setItem('Count', parseInt(localStorage.getItem('Count')) + 1);
+        window.location.reload();
+
+ var time = end - start;
+    localStorage.setItem("timer" , JSON.stringify(time));
+
+      console.log(localStorage.getItem('timer'));
+
+}
+    else{
+    console.log("slut");
+    console.log("slut");
+    };
+});
