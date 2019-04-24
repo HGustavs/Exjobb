@@ -28,12 +28,12 @@ if (localStorage.getItem("Count") === null){
 localStorage.setItem('searchCount' , searchCount = 5);
 
 
-var start = window.performance.now();
+var start = performance.now();
 document.addEventListener('readystatechange', event => {
       if (event.target.readyState === "complete") {
       //console.log("Now external resources are loaded too, like css,src etc... ")
 
-      var end = performance.timing.navigationStart + performance.now();
+      var end = performance.now();
       }
 
     else{
@@ -52,7 +52,9 @@ if(parseInt(localStorage.getItem('Count'), 10) < parseInt(localStorage.getItem('
 
 }
     else{
+    console.log(localStorage.getItem('timer'));
     console.log("slut");
-    console.log("slut");
+
     };
+
 });
