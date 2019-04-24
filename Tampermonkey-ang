@@ -25,7 +25,7 @@ if (localStorage.getItem("Count") === null){
     localStorage.setItem("Count", 1);
 };
 
-localStorage.setItem('searchCount' , searchCount = 5);
+localStorage.setItem('searchCount' , searchCount = 1001);
 
 
 var start = performance.now();
@@ -52,9 +52,7 @@ if(parseInt(localStorage.getItem('Count'), 10) < parseInt(localStorage.getItem('
 
 }
     else{
-    console.log(localStorage.getItem('timer'));
     console.log("slut");
 
     };
-
 });
