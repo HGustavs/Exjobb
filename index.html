@@ -1,50 +1,58 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Examensarbete</title>
-  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Examensarbete - angular</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+  <script src="javascript-ang.js"></script>
 
+  <link rel="stylesheet" type="text/css" href="css-ang.css">
 </head>
 
+<body ng-app="myApp">
 
-<body>
-
-  <div id="header">
-    <h1 id="header1"> {{message}} </h1>
+  <div id="header" ng-controller="mainCtrl";>
+    <h1 id="header1" ng-repeat="y in header"> {{y.text}} </h1>
   </div>
 
-  <div id="menu">
+  <div id="menu" ng-controller="mainCtrl";>
     <ul id="MenuListA">
-      <li id="MenuListB" v-for="todo in todos">
-         {{ todo.text }}
+      <li id="MenuListB" ng-repeat="x in categories">
+        {{ x.category }}
       </li>
     </ul>
   </div>
 
-  <div class="content" id="body1">
-    <div class="news" id="news1">
-      <div>{{ headline }}</div>
-<div><iframe width="560" height="315" src="https://www.youtube.com/embed/HgBN6eHzyBc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-      <div>{{ text }}</div>
+  <div class="content" id="body1" ng-controller="mainCtrl">
+    <div class="news" id="news1" >
+      <div ng-repeat="c in articlesOne">
+      <div><h2>{{ c.headline }}<h2></div>
+      <div>{{ c.text }}</div>
+    </div>
+    <div><iframe width="560" height="315" src="https://www.youtube.com/embed/HgBN6eHzyBc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    </div>
+  </div>
+
+  <div class="content" id="body1" ng-controller="mainCtrl">
+    <div class="news" id="news2" >
+      <div ng-repeat="a in articlesTwo">
+      <div><h2>{{ a.headline }}<h2></div>
+      <div>{{ a.text }}</div>
     </div>
 
-    <div class="news" id="news2">
-      <div>{{ headline }}</div>
-      <div>{{ text }}</div>
     </div>
+  </div>
 
-    <div class="BigNews" id="data">
-      <div v-for="(articles, index) in showArticles" :key="articles.id">
-        <div class="news">
-          <div>{{ articles.title }}</div>
-          <div>{{ articles.author}} {{ articles.date}}</div>
-          <div>{{ articles.content}}</div>
-      </div>
-      </div>
+  <div class="BigNews" id="data" ng-controller="contentThree">
+    <div ng-repeat="article in articleList track by $index">
+      <div class="news">
+        <div><h2>{{ article.title }}<h2></div>
+        <div><h3>{{ article.author}} {{ article.date}}<h3></div>
+        <div>{{ article.content}}</div>
+        {{callUpdate()}}
     </div>
+    </div>
+  </div>
 
-<script src="data.js"></script>
-<script src="javascript.js"></script>
 </body>
+
 </html>
