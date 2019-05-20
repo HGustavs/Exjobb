@@ -4,16 +4,17 @@
   <title>Examensarbete - angular</title>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
   <script src="javascript-ang.js"></script>
+
   <link rel="stylesheet" type="text/css" href="css-ang.css">
 </head>
 
 <body ng-app="myApp">
 
-  <div id="header" ng-controller="headCtrl";>
+  <div id="header" ng-controller="mainCtrl";>
     <h1 id="header1" ng-repeat="y in header"> {{y.text}} </h1>
   </div>
 
-  <div id="menu" ng-controller="headCtrl";>
+  <div id="menu" ng-controller="mainCtrl";>
     <ul id="MenuListA">
       <li id="MenuListB" ng-repeat="x in categories">
         {{ x.category }}
@@ -21,7 +22,7 @@
     </ul>
   </div>
 
-  <div class="content" id="body1" ng-controller="contentOne">
+  <div class="content" id="body1" ng-controller="mainCtrl">
     <div class="news" id="news1" >
       <div ng-repeat="c in articlesOne">
       <div><h2>{{ c.headline }}<h2></div>
@@ -31,11 +32,11 @@
     </div>
   </div>
 
-  <div class="content" id="body1" ng-controller="contentTwo">
+  <div class="content" id="body1" ng-controller="mainCtrl">
     <div class="news" id="news2" >
-      <div ng-repeat="c in articlesTwo">
-      <div><h2>{{ c.headline }}<h2></div>
-      <div>{{ c.text }}</div>
+      <div ng-repeat="a in articlesTwo">
+      <div><h2>{{ a.headline }}<h2></div>
+      <div>{{ a.text }}</div>
     </div>
 
     </div>
@@ -44,9 +45,10 @@
   <div class="BigNews" id="data" ng-controller="contentThree">
     <div ng-repeat="article in articleList track by $index">
       <div class="news">
-        <div>{{ article.title }}</div>
-        <div>{{ article.author}} {{ article.date}}</div>
+        <div><h2>{{ article.title }}<h2></div>
+        <div><h3>{{ article.author}} {{ article.date}}<h3></div>
         <div>{{ article.content}}</div>
+        {{callUpdate()}}
     </div>
     </div>
   </div>
