@@ -2,7 +2,7 @@
 <head>
   <meta charset="utf-8">
   <title>Examensarbete</title>
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
@@ -25,7 +25,7 @@
   <div class="content" id="body1">
     <div class="news" id="news1">
       <div>{{ headline }}</div>
-      <div><iframe width="560" height="315" src="https://www.youtube.com/embed/HgBN6eHzyBc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div><iframe width="560" height="315" src="https://www.youtube.com/embed/HgBN6eHzyBc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
       <div>{{ text }}</div>
     </div>
 
@@ -44,11 +44,6 @@
       </div>
     </div>
 
-<div id="footer">
-    <div  id="footerCont" v-for="todo in todos">
-      {{ todo.text }}
-    </div>
-</div>
 <script src="data.js"></script>
 <script src="javascript.js"></script>
 </body>

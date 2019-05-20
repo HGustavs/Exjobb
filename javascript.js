@@ -1,15 +1,3 @@
-var articles = new Vue({
-  el: '#data',
-  data: data,
-  computed:{
-    showArticles: function(){
-      return this.articles
-    }
-}
-});
-
-//<div> {{articles.content}}</div>
-
 var header = new Vue({
   el: '#header',
   data:{
@@ -24,7 +12,6 @@ var menu = new Vue({
       { text: 'Inrikes'},
       { text: 'Utrikes'},
       { text: 'Sport'},
-      //{ text: ''} för enkel utökning
     ]
   }
 });
@@ -44,15 +31,12 @@ var news2 = new Vue ({
     text:'lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här lorem ipsum här '
   }
 });
-
-var footer = new Vue({
-  el: '#footer',
-  data:{
-    todos:[
-      { text: 'Kontakt'},
-      { text: 'Examensarbete'},
-      { text: 'Terms of Service'},
-      //{ text: ''}
-    ]
-  }
+var articles = new Vue({
+  el: '#data',
+  data: data,
+  computed:{
+    showArticles: function(){
+      return this.articles
+    }
+}
 });
