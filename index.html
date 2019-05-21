@@ -21,27 +21,6 @@
       </li>
     </ul>
   </div>
-
-  <div class="content" id="body1" ng-controller="mainCtrl">
-    <div class="news" id="news1" >
-      <div ng-repeat="c in articlesOne">
-      <div><h2>{{ c.headline }}<h2></div>
-      <div>{{ c.text }}</div>
-    </div>
-    <div><iframe width="560" height="315" src="https://www.youtube.com/embed/HgBN6eHzyBc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-    </div>
-  </div>
-
-  <div class="content" id="body1" ng-controller="mainCtrl">
-    <div class="news" id="news2" >
-      <div ng-repeat="a in articlesTwo">
-      <div><h2>{{ a.headline }}<h2></div>
-      <div>{{ a.text }}</div>
-    </div>
-
-    </div>
-  </div>
-
   <div class="BigNews" id="data" ng-controller="contentThree">
     <div ng-repeat="article in articleList track by $index">
       <div class="news">
