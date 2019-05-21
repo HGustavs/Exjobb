@@ -23,22 +23,11 @@
   </div>
 
   <div class="content" id="body1">
-    <div class="news" id="news1">
-      <div>{{ headline }}</div>
-<div><iframe width="560" height="315" src="https://www.youtube.com/embed/HgBN6eHzyBc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-      <div>{{ text }}</div>
-    </div>
-
-    <div class="news" id="news2">
-      <div>{{ headline }}</div>
-      <div>{{ text }}</div>
-    </div>
-
     <div class="BigNews" id="data">
       <div v-for="(articles, index) in showArticles" :key="articles.id">
         <div class="news">
-          <div>{{ articles.title }}</div>
-          <div>{{ articles.author}} {{ articles.date}}</div>
+          <div><h2>{{ articles.title }}</h2></div>
+          <div><h3>{{ articles.author}} {{ articles.date}}</h3></div>
           <div>{{ articles.content}}</div>
       </div>
       </div>
